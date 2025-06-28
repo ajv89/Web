@@ -44,15 +44,19 @@ h3 {
   text-align: center;
 }
 li {
-  color: darkgreen;
+  color: brown;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 1px;
 }
-button {
+.ini {
   background-color: yellow;
   border: 3px solid black;
-  align-content: end
 }
-
+.sal {
+  background-color: blue;
+  color: black;
+  position: absolute;
+  right: 50px;
+}
 
