@@ -31,6 +31,7 @@ let suTitulo = document.querySelector("h2");
 function salirUser (){
   let desconectado = "exitoso";
   suTitulo.textContent = "Desconectado" + desconectado;
+  alert("Cerrar Seccion")
 }
 salBoton.onclick = function () {
   salirUser();
