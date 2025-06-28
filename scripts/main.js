@@ -11,15 +11,7 @@ miImage.onclick = function () {
 };
 let miBoton = document.querySelector("button");
 let miTitulo = document.querySelector("h1");
-function estableceNombreUsuario() {
-  let miNombre = prompt("Introduzca su nombre.");
-  if (!miNombre) {
-    estableceNombreUsuario();
-  } else {
-    localStorage.setItem("nombre", miNombre);
-    miTitulo.innerHTML = "1Que alegria el que vuevas, " + miNombre;
-  }
-};
+
 function estableceNombreUsuario() {
   let miNombre = prompt("Por favor, ingresa tu nombre.");
   localStorage.setItem("nombre", miNombre);
@@ -33,4 +25,13 @@ if (!localStorage.getItem("nombre")) {
 }
 miBoton.onclick = function () {
   estableceNombreUsuario();
+};
+let salBoton = document.querySelector(".sal");
+let suTitulo = document.querySelector("h2");
+function salirUser (){
+  let desconectado = "exitoso";
+  suTitulo.textContent = "Desconectado" + desconectado;
+}
+salBoton.onclick = function () {
+  salirUser();
 };
