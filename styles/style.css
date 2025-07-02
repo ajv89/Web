@@ -25,6 +25,7 @@ img {
   display: block;
   margin: 0 auto;
   width: 300px;
+
 }
 
 h1 {
@@ -54,6 +55,9 @@ li {
 .ini {
   background-color: yellow;
   border: 3px solid black;
+  position: absolute;
+  top: 50px
+  
 }
 .sal {
   background-color: blue;
@@ -61,8 +65,31 @@ li {
   color: black;
   position: absolute;
   right: 50px;
+  top: 50px;
+  
 }
 .tra { /* 4to parrafo */
   text-align: right;
 }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 3px solid #4A90E2;
+      box-shadow: 0 2px 8px rgba(74,144,226,0.14);
+      position: absolute;
+      top: 150px;
+      right: 50px;
+    }
+    .user-name {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #2d3a4b;
+      position: absolute;
+      top: 120px;
+      right: 50px;
+    }
 
