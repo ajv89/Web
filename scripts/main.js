@@ -57,4 +57,3 @@ function salirUser (){
 salBoton.onclick = function () {
   salirUser();
 };
-
