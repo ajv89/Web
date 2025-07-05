@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+ 		<meta name="viewport" content="width=device-width" />
+		 <link href="styles/video2.css" rel="stylesheet" type="text/css" />
+		<title>Video</title>
+ </head>
+<body>
+		<h1>
+				Pueba Reproductor Video
+		</h1>
+		<video id="my-video" controls width="480" height="270" crossorigin="anonymous">
+  <source
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
+</video>
+
+<canvas id="my-canvas" width="480" height="270"></canvas>
+		<button class="btn">Mostrar vídeo</button> <button class="bto">Ocultar video</button>
+		<div> 
+				<link href="styles/video.css" rel="stylesheet" type="text/css" />
+		
+<div class="hidden" id="ocu">
+		
+  <video class="v1" controls>
+    <source src="media/anime.mp4" type="video/mp4" />
+    <p>
+      Su navegador no es compatible con video HTML. Aquí hay un
+      <a href="rabbit320.mp4">enlace al video</a> en su lugar.
+    </p>
+  </video>
+</div>
+		<script src="scripts/Video.js"></script>
+		
+ <script src="scripts/Video2.js"></script>
+		 <!--
+		 Para anotar modificaciones pendientes
+		 -->
+</body>
+</html>
