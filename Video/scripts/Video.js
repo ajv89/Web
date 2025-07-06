@@ -13,6 +13,17 @@ video.addEventListener("click", () => video.pause());
 
 box.addEventListener("click", () => box.classList.add("hidden"));
 
+const cavE = document.querySelector(".cavE");
+const cavO= document.querySelector(".cavO");
+const fot = document.querySelector(".can");
+
+cavE.addEventListener("click", () => 
+fot.classList.remove("can"));
+
+cavO.addEventListener("click", () => 
+fot.classList.add("can"));
+
+fot.addEventListener("click", () => fot.classList.add("can"));
 
 
 /*```html
