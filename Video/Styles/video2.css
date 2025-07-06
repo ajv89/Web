@@ -1,3 +1,6 @@
 video {
-		position: absolute;
+		position: static ;
+}
+.can {
+		display: none;
 }
