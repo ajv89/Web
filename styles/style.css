@@ -25,7 +25,7 @@ img {
   display: block;
   margin: 0 auto;
   width: 300px;
-
+  
 }
 
 h1 {
@@ -92,4 +92,13 @@ li {
       top: 120px;
       right: 50px;
     }
-
+.pagv{
+  background: black;
+  border: 2px solid burlywood;
+}
+.casa {
+  color: yellow;
+}
+select {
+  display: none;
+}
