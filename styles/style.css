@@ -95,10 +95,13 @@ li {
 .pagv{
   background: black;
   border: 2px solid burlywood;
+  color: white;
 }
 .casa {
   color: yellow;
 }
 select {
   display: none;
+  color: white;
+  right: 300px;
 }
