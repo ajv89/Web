@@ -1,5 +1,6 @@
 /* Estoy es para comentario */
 p {
+  background-color: #260C0C;
   color: #4DF73A;
   width: 300px;
   border: 1px solid blue;
@@ -12,6 +13,7 @@ html {
   font-family:
     "Oswald", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
   background: #4DF73A;
+  color: black;
 }
 body {
   height: auto;
@@ -20,6 +22,7 @@ body {
   background-color: #260C0C;
   padding: 0 20px 20px 20px;
   border: 5px solid red;
+  color: black;
 }
 img {
   display: block;
@@ -35,13 +38,16 @@ h1 {
   padding: 20px 0;
   color: #00539f;
   text-shadow: 3px 3px 1px black;
+  background-color: #260C0C;
 }
 h2 {
   background-color: burlywood;
   font-size: 30px;
   text-align: center;
+  color: black;
 }
 h3 {
+  color: black;
   background-color: burlywood;
   font-size: 25px;
   text-align: center;
@@ -51,13 +57,14 @@ li {
   font-size: 14px;
   line-height: 1;
   letter-spacing: 1px;
+  background-color: #260C0C;
 }
 .ini {
   background-color: yellow;
   border: 3px solid black;
   position: absolute;
-  top: 50px
-  
+  top: 50px;
+  color: black;
 }
 .sal {
   background-color: blue;
@@ -91,17 +98,29 @@ li {
       position: absolute;
       top: 120px;
       right: 50px;
+      background-color: #260C0C;
     }
 .pagv{
+  font-size: 12px;
   background: black;
   border: 2px solid burlywood;
   color: white;
+  position: absolute;
+  right: 50px;
+  bottom: -7%; 
 }
-.casa {
+.vid {
+  background: black;
   color: yellow;
 }
 select {
-  display: none;
-  color: white;
-  right: 300px;
+  font-size: 14px;
+  color: #00539f;
+  background-color: black;
+}
+
+label {
+  color: aqua;
+  background-color: black;
+  border: 2px solid blue;
 }
