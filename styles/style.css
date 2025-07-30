@@ -1,9 +1,9 @@
 /* Estoy es para comentario */
 p {
-  background-color: #260C0C;
+  
   color: #4DF73A;
   width: 300px;
-  border: 1px solid blue;
+  
   font-size: 14px;
 }
 html {
@@ -12,14 +12,14 @@ html {
   font-size: 10px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
   font-family:
     "Oswald", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
-  background: #4DF73A;
+  background: darkslategray;
   color: black;
 }
 body {
   height: auto;
   width: auto;
   margin: 0% 5% auto;
-  background-color: #260C0C;
+  background-color: #23282b;
   padding: 0 20px 20px 20px;
   border: 5px solid red;
   color: black;
@@ -38,7 +38,7 @@ h1 {
   padding: 20px 0;
   color: #00539f;
   text-shadow: 3px 3px 1px black;
-  background-color: #260C0C;
+  
 }
 h2 {
   background-color: burlywood;
@@ -52,20 +52,21 @@ h3 {
   font-size: 25px;
   text-align: center;
 }
-#ol1 {
-  border: 2px solid yellow;
-  width: 260px;
+.p1,
+.p2 {
+  border: 1px solid blue;
 }
+#ol1,
 #ul1 {
-  border: 2px solid yellow;
   width: 260px;
 }
+
 li {
-  color: brown;
+  color: antiquewhite;
   font-size: 12px;
   line-height: 1;
   letter-spacing: 1px;
-  background-color: #260C0C;
+  
 }
 .ini {
   background-color: yellow;
@@ -103,12 +104,15 @@ li {
       font-size: 1.4em;
       font-weight: bold;
       margin-bottom: 8px;
-      color: #2d3a4b;
+      color: blue;
       position: absolute;
       top: 120px;
       right: 50px;
-      background-color: #260C0C;
+      
     }
+.Pv {
+  display: none;
+}
 .pagv{
   font-size: 12px;
   background: black;
@@ -142,23 +146,26 @@ select {
   color: #00539f;
   
 }
+
 nav ul, #myBtn2 {
   list-style: none; /* Elimina los puntos de la lista */
   padding: 0;
   margin: 0;
-  background-color: #260C0C; /* Opcional: color de fondo del menú */
+  background-color: midnightblue; /* Opcional: color de fondo del menú */
 }
 
 nav li, #myBtn2 {
   display: inline-block; /* Muestra los elementos de la lista horizontalmente */
-  margin-right: 12px; /* Espacio entre elementos */
+  margin-right: 5px; /* Espacio entre elementos */
+  margin-left: 15px;
+  font-size: 14px;
 }
 
 nav a {
   display: block; /* Hace que el enlace ocupe todo el espacio del li */
   padding: 10px 12px;
   text-decoration: none; /* Elimina el subrayado del enlace */
-  color: #00539f; /* Color del texto del enlace */
+  color: #f3f3f3; /* Color del texto del enlace */
 }
 
 nav a:hover {
@@ -182,7 +189,9 @@ nav a:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    position: center;
+    height: 70%;
+    
+    
     
   }
 .modal-content h2 {
@@ -209,24 +218,29 @@ nav a:hover {
   color: white;
   padding: 5px 80px;
   margin-left: 20px;
+  margin-top: 10px;
   width: 83%;
+  font-size: 1.5rem;
 }
 
 .form-co {
   background-color: #1d1d1f;
-  position: center;
+  border: 1px solid white;
   width: 80%;
   height: 100%;
   color: aliceblue;
+  font-size: 14px;
 }
 .form-la {
-  color: black;
+  color: cornflowerblue;
   font-size: 18px;
-  display: block; /*intercala formulario y cuadro */
+  display: block; /*intercala formulario y cuadro???? */
 }
 .form-la,
 .form-co {
   margin-left: 20px;
+  margin-bottom: 5px;
+  
 }
 
 .text-center {
@@ -241,9 +255,8 @@ nav a:hover {
 
 .gauth, .dauth {
   margin-left: 20px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   color: #fff;
-  background: #eee;
   font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
@@ -255,14 +268,45 @@ nav a:hover {
 }
 .gauth {
   background: #ff5722;
-  color: #fff;
+  
   padding: 5px 81px;
 }
 .dauth {
   background: #818cf8;
   padding: 5px 80px;
 }
-#mclose {
-  font-size: 16px;
-  right: 100%;
-}
+
+/*Login flotante*/
+    .auth-container {
+        /*display: none;*/ 
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+    .auth-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        transition: transform 0.6s ease-in-out;
+        display: flex-inline;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: -60px;
+        padding-left: 10px;
+    }
+    .auth-wrapper.login {
+        transform: translateX(0%);
+    }
+    .auth-wrapper.register {
+        transform: translateX(100%);
+    }
+    .auth-container.active .auth-wrapper.login {
+        transform: translateX(-100%);
+    }
+    .auth-container.active .auth-wrapper.register {
+        transform: translateX(0%);
+    }
+    .auth-container.active {
+        height: 400px;
+    }
