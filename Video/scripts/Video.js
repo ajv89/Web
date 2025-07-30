@@ -25,7 +25,18 @@ fot.classList.add("can"));
 
 fot.addEventListener("click", () => fot.classList.add("can"));
 
+/* Video */
+const cav1 = document.querySelector(".cav1");
+const cav2= document.querySelector(".cav2");
+const fot1 = document.querySelector(".can2");
 
+cav1.addEventListener("click", () => 
+fot1.classList.remove("can2"));
+
+cav2.addEventListener("click", () => 
+fot1.classList.add("can2"));
+
+fot1.addEventListener("click", () => fot1.classList.add("can2"));
 /*```html
 <button>Mostrar vídeo</button>
 

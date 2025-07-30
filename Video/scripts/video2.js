@@ -47,4 +47,51 @@ const processor = {
 
 processor.doLoad();
 
+// FotoGrama VIDEO2
+const processor2 = {
+  timerCallback() {
+    if (this.video2.paused || this.video2.ended) {
+      return;
+    }
+    this.computeFrame();
+    setTimeout(() => {
+      this.timerCallback();
+    }, 16); // roughly 60 frames per second
+  },
+doLoad() {
+    this.video2 = document.getElementById("my-video2");
+    this.c2 = document.getElementById("my-canvas2");
+    this.ctx2 = this.c2.getContext("2d");
+
+    this.video2.addEventListener(
+      "play",
+      () => {
+        this.width = this.video2.width;
+        this.height = this.video2.height;
+        this.timerCallback();
+      },
+      false,
+    );
+  },
+
+  computeFrame() {
+    this.ctx2.drawImage(this.video2, 0, 0, this.width, this.height);
+    const frame = this.ctx2.getImageData(0, 0, this.width, this.height);
+    const l = frame.data.length / 4;
+
+    for (let i = 0; i < l; i++) {
+      const grey =
+        (frame.data[i * 4 + 0] +
+          frame.data[i * 4 + 1] +
+          frame.data[i * 4 + 2]) /
+        3;
+
+      frame.data[i * 4 + 0] = grey;
+      frame.data[i * 4 + 1] = grey;
+      frame.data[i * 4 + 2] = grey;
+    }
+    this.ctx2.putImageData(frame, 0, 0);
+  },
+		};
+processor2.doLoad();
 
