@@ -4,7 +4,7 @@ html{
   font-size: 16px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
   font-family:
     "Oswald", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
-  background: #4DF73A;
+  background: darkslategray;
 }
 h1{
   font-size: 36px;
@@ -15,6 +15,9 @@ h1{
     margin: 0;
   padding: 20px 0;
     color: black;
+}
+h2 {
+    text-align: center;
 }
 div {
   width: 100%;
@@ -39,6 +42,7 @@ button {
     margin-bottom: 5px;
 }  
 .home {
+    display: none;
   font-size: 16px;
  background-color: blue;
   border: 3px solid green;
@@ -54,4 +58,35 @@ body{
     padding: 10px 0;
     background: cornflowerblue;
     margin: auto;
+}
+#myBtn2 {
+  border: none;
+  color: #00539f;
+  left: 10%;
+}
+
+nav ul, #myBtn2 {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  background-color: midnightblue; /* Opcional: color de fondo del menú */
+    justify-content: center;
+}
+
+nav li {
+  display: inline-block; /* Muestra los elementos de la lista horizontalmente */
+  margin-right: 5px; /* Espacio entre elementos */
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+nav a {
+  display: block; /* Hace que el enlace ocupe todo el espacio del li */
+  padding: 10px 12px;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #f3f3f3; /* Color del texto del enlace */
+}
+
+nav a:hover {
+  background-color: #ddd; /* Efecto hover */
 }

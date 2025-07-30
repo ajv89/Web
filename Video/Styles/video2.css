@@ -1,6 +1,7 @@
 video {
 		position: static ;
 }
-.can {
+.can,
+ .can2 {
 		display: none;
 }
