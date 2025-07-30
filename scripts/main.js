@@ -75,5 +75,16 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+const regi = document.querySelector("#showRegister");
+const loga= document.querySelector("#showLogin");
+const cont = document.querySelector(".auth-container");
+const reg2 = document.querySelector("#regi")
 
+loga.addEventListener("click", () => 
+cont.classList.remove("active"));
 
+regi.addEventListener("click", () => 
+cont.classList.add("active"));
+
+regi.onclick = function() {
+  reg2.style.display = "block";}
