@@ -1,9 +1,9 @@
 <!doctype html>
-  <!-- (<!- -) ESTO AGREGA COMENTARIO en HTML: (- - >) -->
+  <!--AGREGA COMENTARIO en HTML: -->
 <html lang="es-419">
   <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WE3WT3EQ8W"></script>
 <script>
@@ -13,6 +13,7 @@
 
   gtag('config', 'G-WE3WT3EQ8W');
 </script>
+    
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -26,48 +27,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet" type="text/css" >
     
- <title>GitHub Página de prueba</title>
+ <title>GitHub Página de Prueba</title>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6HPH9Q6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag(noscript) -->
     <nav>
-  <ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Servicios</a></li>
-    <li><a href="#">Acerca de</a></li>
-    <li><button id="myBtn2"><a href="#">Login</a></button></li>
-  </ul>
+  <ul><b>
+    <li><a href="#"><i class="bi bi-house-door-fill"></i>Inicio</a></li>
+    <li><a href="Video/video.html"><i class="bi bi-camera-video-fill"></i>Videos</a></li>
+    <li><button id="myBtn2"><a href="#"><i class="bi bi-person-circle"></i><b>Login</b></a></button></li>
+  </ul></b>
 </nav>
    
-    <h1>Titulo Principal N°1</h1>
+    <h1>Mi Primera Paguina Web</h1>
     <img width="292" height="164" src="https://fotos.miarroba.com/me/49ce/3868C594F931685E187F2F685E187D.webp" alt="La corona solar visible alrededor de la Luna durante un eclipse solar total, mostrando un fenómeno astronómico impresionan">
 
-    <h2>Segundo Titulo</h2>
+    <h2>Segundo Contenido</h2>
+    <div class="p1">
     <p>Parrafo primero.para explayar mas el contenido</p>
     <p>Segundo parrafo... falta contenido aun</p>
+    </div>
     <h3>Probando con ejemplos para armar una lista</h3>
+    <div class="p1">
     <p>En Mozilla, somos una comunidad de:</p>
 <ul id="ul1">
   <li>tecnólogos</li>
   <li>pensadores</li>
   <li>constructores</li>
 </ul>
-<p class="tra">trabajando juntos...</p>
+    <p class="tra">trabajando juntos...</p></div>
+    <br>
+    <div class="p1">
     <p>Aca tengo que agregar un vinculo. el que voy a usar para dos paguina echa on-line</p>
+    
     <ol id="ol1">
       <li>De <a href="https://aresrosari.webcindario.com/">MiArroba</a></li>
       <li>Con una <a href="https://aresrosari.hellofigwebsite.com/">APP</a></li>      
       <li>Mi @ <a href="https://ajv89.webcindario.com/">Ajv89</a></li>
-      <li>Foro <a href="https://executer.foroes.org/">Executer</a></li>    
+      <li>Foro <a href="https://executer.foroes.org/">Executer</a></li>
     </ol>
+  </div>
     <button class="ini">Cambiar de usuario</button>
     <button class="sal">Cerrar Sección</button>
     <div class="user-card">
-    <img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Un hombre con barba y camisa morada, sonriendo y mirando directamente a la cámara"></div>
+    <img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Un hombre con barba"></div>
     <div class="user-name">Invitado</div>
     
     <label id="opt1">Selecciona una Opción</label>
@@ -90,14 +97,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="close">&times;</span>
     <!--Fin ventana Usuario GENERAL -->
     
-    <div id="modal"> <!-- en Css oculta panel Login/Reg Usuari-->
-		<div id="modal-back"></div>
-		<div class="modal-d" style="height: 530px; max-width: 600px;">
-				<div id="modal-c">
-						<h3></h3>
-						<span style="padding: 0;" id="mc">
+    
 								<div class="auth-container">
-										<div class="login">
+								  <div class="auth-wrapper login">
 												<h2 class="mb-4">Iniciar Sesión</h2>
 												<div class="alert alert-danger" style="display: none;" role="alert"></div>
 												<form id="loginForm">
@@ -114,17 +116,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 														</div>
 														<button type="submit" class="btn-ent mb-3">Entrar</button>
 														<p class="text-center">¿No tienes una cuenta? <a href="#" id="showRegister">Regístrate aquí</a></p>
-														<hr>
-														
+														<hr style="display: none;">
+												  <br>
+												  <br>
 														<a href="https://www.google.com" style="" class="gauth"><i class="bi bi-google" style=""></i> Entrar con Google </a>
 												  <br>
 												  <br>
-														<a href="https://www.discord.com" style="" class="dauth"><i class="bi bi-discord"></i> Entrar con Discord</a>
+												  <br>
+														<a href="https://discord.com" style="" class="dauth"><i class="bi bi-discord"></i> Entrar con Discord</a>
 														
 												</form>
-										</div>
+										
+								  </div>
 								  <!-- Comienzo Registro-->
-										<div class="auth-wrapper register" style="display: none;"><!--// crear js para mostrar registro/-->
+										<div id="regi" class="auth-wrapper register" style="display: none;"><!--// crear js para mostrar registro/-->
 												<h2 class="mb-4">Registrarse</h2>
 												
 												<div class="alert alert-danger" style="display: none;" role="alert"></div>
@@ -157,7 +162,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										</div>
 								</div>
 						  <br>
-						</span><div id="buttons"><a id="mclose" href="#">Cerrar</a></div>
+						</span>
 						
 				</div>
 		</div>
