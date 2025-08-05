@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+
+		<html lang="es-419">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+		
+		<title>LOGIN PHP</title>
+</head>
+<body>
+		<h1>
+				LOGIN Y REGISTRO<br>
+				CON PHP
+		</h1>
+		<!-- login.html -->
+<form action="login.php" method="post">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  <label for="contrasena">Contraseña:</label>
+  <input type="password" id="contrasena" name="contrasena" required><br><br>
+  <input type="submit" value="Login">
+</form>
+
+		<h1 id="Logueado"> Logueado</h1>
+		<p class="ingrar" style="border: 1px solid #000000;border-radius: 12px;"> Deberia verse una vez logueado</p>
+		<br><hr>
+		<h1 id="Registro" class="Registro" style="margin-left: 20px;">Registrarse</h1>
+		<!-- registro.html -->
+<form action="registrar.php" method="post">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  <label for="contraseña">Contraseña:</label>
+  <input type="password" id="contraseña" name="contraseña" required><br><br>
+  <input type="submit" value="Registrar">
+</form>
+
+</body>
+</html>
