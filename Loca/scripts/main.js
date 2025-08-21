@@ -1,0 +1,106 @@
+
+// ESTO ES PARA COMENTARIO
+let miImage = document.querySelector("img");
+miImage.onclick = function () {
+  let miSrc = miImage.getAttribute("src");
+  if (miSrc ==="images/imag1.jpg") {
+    miImage.setAttribute("src", "images/cr.png");
+  } else {
+    miImage.setAttribute("src", "images/imag1.jpg");
+  }
+};
+// DATOS LOGIN
+const username= document.getElementById('loginUsername').value;
+let usuarioA = "Ari";
+let usuarioD = "Desconectado";
+let usuarioR = "Reg";
+let miBoton = document.getElementById("be")
+//document.querySelector("button");
+let user = document.querySelector(".user-name");
+let useReg = 
+document.querySelector(".avatar");
+let ingresado= document.querySelector("#myBtn2");
+function estableceNombreUsuario() {
+ /*/ //let miNombre = prompt("Por favor, ingresa tu nombre.");
+//  let usuario= get*/
+  let miNombre= localStorage.getItem("username");
+  /*//localStorage.setItem("username", miNombre);*/
+  user.textContent = "" + miNombre;
+if (!localStorage.getItem("username")) {
+  estableceNombreUsuario();
+} else {
+  let nombreAlmacenado = localStorage.getItem("username");
+  alert( "Que alegria el que vuelvas," + nombreAlmacenado);
+}
+if (usuarioA === miNombre){
+  useReg.setAttribute("src","images/A1.jpg")
+ // "https://fotos.miarroba.com/th/92e1/24688094642468633EFB1E68633D57.webp")
+} else if (usuarioR === miNombre){
+  useReg.setAttribute("src","images/naru.jpg")
+  //"https://fotos.miarroba.com/th/5977/2B688094622A68633EF82568633D55.webp")
+} else { 
+  useReg.setAttribute("src","images/fa.jpg")}
+  //https://fotos.miarroba.com/th/b346/2B688094622968633EF72568633D55.webp")}
+}
+
+miBoton.onclick = function () {
+  estableceNombreUsuario();
+   ingresado.style.display = "none";
+};
+// Desconectar
+let salBoton = document.querySelector(".sal");
+let usuario = document.querySelector(".user-name");
+let usuA = document.querySelector(".avatar");
+function salirUser (){
+  
+  let desconectado = "Desconectado";
+  usuario.textContent = "Usuario " + desconectado;
+  alert("Desconexion Exitosa");
+  let imgA =
+  usuA.getAttribute("src");
+  if (usuA === "images/32.jpg"){
+    imgA.setAttribute("src","images/fa.jpg");
+    localStorage.removeItem("username", miNombre);
+    console.log(localStorage.getItem("username"));
+  } else {
+    usuA.setAttribute("src", "images/fa.jpg");/* "https://randomuser.me/api/portraits/men/32.jpg"*/
+    //localStorage.removeItem("username");
+  }
+};
+salBoton.onclick = function () {
+  salirUser();  localStorage.setItem("",username);
+   ingresado.style.display = "";
+  console.log(localStorage.getItem("username"));
+};
+// ventana emergente usuario
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn2");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+// dmDISPLAY FORMULARIO
+const regi = document.querySelector("#showRegister");
+const loga= document.querySelector("#showLogin");
+const cont = document.querySelector(".auth-container");
+const reg2 = document.querySelector("#regi")
+
+loga.addEventListener("click", () => 
+cont.classList.remove("active"));
+
+regi.addEventListener("click", () => 
+cont.classList.add("active"));
+
+regi.onclick = function() {
+  reg2.style.display = "block";}
