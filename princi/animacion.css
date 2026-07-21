@@ -1,0 +1,66 @@
+.scrolling-container, .scrolling-container.web {
+  /* Oculta cualquier parte del texto que se salga del contenedor */
+  overflow: hidden; 
+  /* Asegura que el contenedor tenga un tamaño fijo para que el efecto sea visible */
+  width: 100%; 
+  /* Añade espacio interno */
+  padding: 5px 0;
+  /* Alinea el texto */
+  text-align: center;
+}
+
+.scrolling-container h1 {
+  /* Previene que el texto se salte de línea */
+  white-space: nowrap; 
+  /* Aplica la animación 'scroll-left' */
+  animation: scroll-left 10s linear infinite;
+  /* Opcional: Estilo de la fuente*/
+  color: #333;
+  background-color: transparent;
+}
+.scrolling-container h2 {
+  white-space: nowrap; 
+  /* Aplica la animación  'scroll-left' */
+  animation: scroll-left 7s linear infinite;
+  background-color: transparent;
+}
+.scrolling-container.web h4 {
+  
+  white-space: nowrap; 
+  /* Aplica la animación 'scroll-left' */
+  animation: scroll-left 5s linear infinite;
+  /* Opcional: Estilo de la fuente 
+  font-family: sans-serif;
+  color: #333;*/
+  background-color: transparent;
+}
+.scrolling-container h4 {
+  
+  white-space: nowrap; 
+  /* Aplica la animación 'scroll-left' */
+  animation: scroll-left 23s linear infinite;
+  
+  background-color: transparent;
+}
+.scrolling-container h4:hover {
+  /* Detiene la animación */
+  animation-play-state: paused; 
+}
+.scrolling-container h2:hover {
+  /* Detiene la animación */
+  animation-play-state: paused; 
+}
+
+/* Define la animación */
+@keyframes scroll-left {
+  0% {
+    /* Posición inicial: El elemento está completamente a la derecha */
+    transform: translateX(100%);
+  }
+  100% {
+    /* Posición final: El elemento está completamente a la izquierda */
+    transform: translateX(-100%);
+  }
+}
+
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es-005">
+ <head>
+  <meta charset='UTF-8'>
+ 		<meta name="viewport" content="width=device-width">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="styles/video2.css" rel="stylesheet" type="text/css" >
+<link href="video.css" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" href="animacion.css">
+<link rel="shortcut icon" href="22.png">
+
+		<title>Video Action</title>
+ </head>
+<body>
+ <?php 
+include 'menuC.php';
+include 'menuS.php';
+?>
+<style>
+    #myBI {
+        display: <?php echo isset($_SESSION['nombredelusuario']) ? 'none' : 'block'; ?>;
+    }
+#use {
+        display: <?php echo isset($_SESSION['nombredelusuario']) ? 'block' : 'none'; ?>;
+    }
+</style>
+
+  <nav>
+</nav>
+     <div class="scrolling-container">
+     <h2>IDentificado:<?php echo isset($_SESSION['nombredelusuario']) ? 'OK' : 'NOK'; ?></h2><hr>
+  <h1>Reproductor de Video_action</h1>
+</div>
+
+		<!--<h1>Reproductor de Video</h1>-->
+          <a href="video.php">Ir a Video</a>
+				<div class="contenedor-video">												    
+		<video id="my-video" poster="media/bunny.png" controls width="400" height="270" crossorigin="anonymous">
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" >
+</video>
+         
+ <button class="cavE">FotoGrama Mostrar</button>
+     <button class="cavO">FotoGrama Ocultar</button>
+
+<canvas class="can" id="my-canvas" width="400" height="270"></canvas>
+ <br>
+         </div>
+     <h2>Agregando cosas despues de este Titulo</h2> 
+         	<div class="contenedor-video">
+ <button class="btn" id="mv">Mostrar vídeo</button>
+     <button class="bto" id="ov">Ocultar video</button>
+		
+     <div>
+<div class="hidden" id="ocu">
+  <video id="my-video2" class="v1" poster="media/Anime.jpg" controls muted width="470" height="270" crossorigin="anonymous">
+    <source src="media/Anime.mp4" type="video/mp4">
+   
+    <p>Su navegador no es compatible con video HTML. Aquí hay un
+      <a href="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm">enlace al video</a> en su lugar.</p>
+  </video>
+</div>
+		</div>
+        
+          <button class="cav1"> Ver FotoGrama</button>
+        <button class="cav2">Esconder FotoGrama</button>
+        
+ <canvas class="can2" id="my-canvas2" width="400" height="270"></canvas>
+        </div>
+        <br>
+     
+     <label id="opt1">Selecciona una Opción</label>
+      <select class="sele" id="seleccion" onchange="redireccion()">
+    	<option value="" selected>----</option>
+      <option value="crud.php">Crud</option>
+      <option value="file.php">File</option>
+      <option value="raiz.php">Raiz</option>
+      </select>
+     
+					<!--		<a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a>		-->
+									
+     <p>ID de usuario logueado (para prueba): <?php echo isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : "No logueado"; ?></p>
+
+		<script src="Video.js"></script>
+ <script src="video2.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const v1 = document.getElementById('my-video');
+    const v2 = document.getElementById('my-video2');
+    // Forzamos que el ID de usuario sea un número válido
+    const uId = "1";
+  //  <?php echo isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : "0"; ?>;
+
+    if (uId > 0) {
+        const registrar = (videoId, action) => {
+            const datos = {
+                userid: uId,
+                videoId: videoId,
+                action: action,
+                time: new Date().toISOString()
+            };
+
+            console.log("Intentando enviar:", datos);
+
+            fetch('log_activity.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datos) // Esto es lo que lee php://input
+            })
+            .then(res => res.text()) // Cambiamos a text() temporalmente para ver errores
+            .then(texto => {
+                console.log("Respuesta bruta del servidor:", texto);
+                try {
+                    const json = JSON.parse(texto);
+                    console.log("JSON procesado:", json);
+                } catch(e) {
+                    console.error("El servidor no devolvió un JSON válido");
+                }
+            })
+            .catch(err => console.error("Error en el envío:", err));
+        };
+
+        if(v1) {
+            v1.onplay = () => registrar('video-bunny', 'play');
+            v1.onpause = () => registrar('video-bunny', 'pause');
+        }
+        if(v2) {
+            v2.onplay = () => registrar('video-anime', 'play');
+            v2.onpause = () => registrar('video-anime', 'pause');
+        }
+    }
+});
+</script>
+
+		 <!--
+		 Para anotar modificaciones pendientes-->
+		     
+</body>
+</html>

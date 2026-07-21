@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-005">
+ <head>
+  <meta charset='UTF-8'>
+ 		<meta name="viewport" content="width=device-width">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  
+<link href="video2.css" rel="stylesheet" type="text/css" >
+<link href="video.css" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" href="animacion.css">
+<link rel="shortcut icon" href="22.png">
+
+		<title>Video HTML</title>
+ </head>
+<body>
+
+  <nav>
+	 <ul><b>
+    <li><a href="index.html"><i class="bi bi-house-door-fill"></i>Inicio</a></li>
+    <li><a href="#"><i class="bi bi-camera-video-fill"></i>Videos</a></li>
+    <li><button id="myBtn2"><a href="#"><i class="bi bi-person-circle"></i><b>Login</b></a></button></li>
+  </b></ul>
+</nav>
+     <div class="scrolling-container">
+     <h2>IDentificado: <div class="user-name">Invitado</div></h2><hr>
+  <h1>Reproductor de Video</h1>
+</div>
+
+		<!--<h1>Reproductor de Video</h1>-->
+         <a href="video_acti.php">Ir para Registro de Video</a>
+				<div class="contenedor-video">												    
+		<video id="my-video" poster="bunny.png" controls width="300" height="164" crossorigin="anonymous">
+  <source
+    src="bunny.mp4" type="video/mp4" >
+</video>
+         
+ <button class="cavE">FotoGrama Mostrar</button>
+     <button class="cavO">FotoGrama Ocultar</button>
+
+<canvas class="can" id="my-canvas" width="300" height="164"></canvas>
+ <br>
+         </div>
+     <h2>Agregando cosas despues de este Titulo</h2> 
+         	<div class="contenedor-video">
+ <button class="btn" id="mv">Mostrar vídeo</button>
+     <button class="bto" id="ov">Ocultar video</button>
+		
+     <div>
+<div class="hidden" id="ocu">
+  <video id="my-video2" class="v1" poster="media/Anime.jpg" controls muted playsinline webkit-playsinline width="300" height="164" crossorigin="anonymous">
+    <source src="01.mp4" type="video/mp4">
+   
+    <p>Su navegador no es compatible con video HTML. Aquí hay un
+      <a href="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm">enlace al video</a> en su lugar.</p>
+  </video>
+</div>
+		</div>
+        
+          <button class="cav1"> Ver FotoGrama</button>
+        <button class="cav2">Esconder FotoGrama</button>
+        
+ <canvas class="can2" id="my-canvas2" width="300" height="164"></canvas>
+        </div>
+        <br>
+     
+     <label id="opt1">Selecciona una Opción</label>
+      <select class="sele" id="seleccion" onchange="redireccion()">
+    	<option value="" selected>----</option>
+      <option value="crud.php">Crud</option>
+      <option value="file.php">File</option>
+      <option value="raiz.php">Raiz</option>
+      </select>
+     
+					<!--		<a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a>		-->
+<?php
+include("login_reg.php");
+?>     
+<script src="Video.js"></script>
+<script src="video2.js"></script>
+ 
+ 		<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const userAvatar = document.querySelector('.user-avatar');
+    const userMenu = document.getElementById('userMenu');
+
+    if (userAvatar && userMenu) {
+        userAvatar.addEventListener('click', () => {
+            userMenu.classList.toggle('show');
+        });
+
+        // Opcional: Oculta el menú cuando se hace clic fuera de él.
+        document.addEventListener('click', (event) => {
+            if (!userAvatar.contains(event.target) && !userMenu.contains(event.target)) {
+                userMenu.classList.remove('show');
+            }
+        });
+    }
+});
+</script>
+		 <!--
+		 Para anotar modificaciones pendientes
+		 -->
+		     
+</body>
+</html>
+
+		     
+

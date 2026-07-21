@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Desplegable PHP</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .contenido { border: 1px solid #ccc; padding: 15px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Selecciona una opción para ver el contenido</h2>
+
+    <form method="post" action="">
+        <label for="pagina">Elige una página:</label>
+        <select name="pagina" id="pagina">
+            <option value="inicio">Inicio</option>
+            <option value="acerca">Acerca de nosotros</option>
+            <option value="contacto">Contacto</option>
+        </select>
+        <button type="submit">Mostrar</button>
+    </form>
+
+    <div class="contenido">
+        <?php
+            $pagina_seleccionada = isset($_POST['pagina']) ? $_POST['pagina'] : 'inicio';
+
+            switch ($pagina_seleccionada) {
+                case 'acerca':
+                    echo "<h3>Acerca de nosotros</h3>";
+                    echo "<p>Somos una empresa dedicada a...</p>";
+                    break;
+                case 'contacto':
+                    echo "<h3>Contacto</h3>";
+                    echo "<p>Puedes contactarnos en...</p>";
+                    break;
+                case 'inicio':
+                default:
+                    echo "<h3>Página de inicio</h3>";
+                    echo "<p>Bienvenido a nuestro sitio web.</p>";
+                    break;
+            }
+        ?>
+    </div>
+    <div class="proyecto">
+    <p>holaaa </p>
+    </div>
+
+</body>
+</html>
