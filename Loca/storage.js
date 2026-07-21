@@ -53,5 +53,5 @@ function nameDisplayCheck() {
     rememberDiv.style.display = "block";
   }
 }
-//document.body.onload = nameDisplayCheck;
+document.body.onload = nameDisplayCheck;
 nameDisplayCheck();
