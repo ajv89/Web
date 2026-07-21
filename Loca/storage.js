@@ -2,7 +2,7 @@
 const rememberDiv = document.querySelector(".remember");
 const forgetDiv = document.querySelector(".forget");
 const form = document.querySelector("form");
-const nameInput = document.querySelector("#loginUsername");
+const nameInput = document.querySelector("#entername");
 const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
 
